@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-
+import './DetectNews.css';
 const DetectNews = () => {
     const { user } = useOutletContext();
     const [newsText, setNewsText] = useState("");
@@ -54,7 +54,7 @@ const DetectNews = () => {
     };
 
     return (
-        <div>
+        <div className="detect-news-container">
             <h2>Detect News</h2>
 
             <div>

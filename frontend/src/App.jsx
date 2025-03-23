@@ -6,6 +6,7 @@ import SharedLayout from "./Components/SharedLayout";
 import DetectImage from "./Components/DetectImage";
 import DetectNews from "./Components/DetectNews";
 import Register from "./Components/Register";
+import './App.css';
 function App() {
   const [user, setUser] = useState("");
   return (

@@ -1,0 +1,99 @@
+/* Home Page Styling */
+
+.home {
+    padding: 40px;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+    background: #f9f9f9;
+    color: #333;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.section {
+    margin-bottom: 50px;
+    padding: 30px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.section h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #34495e;
+}
+
+.section p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: justify;
+    margin-bottom: 20px;
+}
+
+.section ul {
+    padding-left: 20px;
+}
+
+.section ul li {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.stats {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #e74c3c;
+    margin: 20px 0;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+    .home {
+        padding: 20px;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .section {
+        padding: 20px;
+    }
+
+    .section h2 {
+        font-size: 1.8rem;
+    }
+
+    .section p, .section ul li {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .section h2 {
+        font-size: 1.5rem;
+    }
+
+    .section p, .section ul li {
+        font-size: 0.9rem;
+    }
+}

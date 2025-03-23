@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useOutletContext } from "react-router-dom";
-
+import './DetectImage.css';
 const DetectImage = () => {
     const { user } = useOutletContext();
     const [image, setImage] = useState(null);
@@ -57,7 +57,7 @@ const DetectImage = () => {
     };
 
     return (
-        <div>
+        <div className="detect-image-container">
             <h2>Detect Image</h2>
 
             <div>

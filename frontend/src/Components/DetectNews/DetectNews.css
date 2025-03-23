@@ -1,0 +1,102 @@
+/* DetectNews Component Styling */
+
+/* Container styling */
+.detect-news-container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Title styling */
+.detect-news-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+/* Label styling */
+.detect-news-container label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #555;
+}
+
+/* Textarea styling */
+.detect-news-container textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 1rem;
+    resize: none;
+    margin-bottom: 1rem;
+    box-sizing: border-box;
+}
+
+/* Button styling */
+.detect-news-container button {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.detect-news-container button:disabled {
+    background: #a5d6a7;
+    cursor: not-allowed;
+}
+
+.detect-news-container button:hover:not(:disabled) {
+    background: #45a049;
+}
+
+/* Error message styling */
+.error-message {
+    color: red;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+/* Prediction result styling */
+.prediction-result {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Real news styling */
+.prediction-real {
+    color: #4CAF50;
+}
+
+/* Fake news styling */
+.prediction-fake {
+    color: #E53935;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    .detect-news-container {
+        padding: 1rem;
+    }
+
+    .detect-news-container textarea {
+        font-size: 0.9rem;
+    }
+
+    .detect-news-container button {
+        font-size: 0.9rem;
+    }
+}
