@@ -4,7 +4,7 @@ const path = require("path");
 const fs = require("fs");
 const predictImage = require("../controller/deepFake");
 const router = express.Router();
-
+const authorize = require('../middleware/authorize');
 // Set up storage for uploaded files
 const uploadDir = path.join(__dirname, "../uploads");
 if (!fs.existsSync(uploadDir)) {
@@ -22,6 +22,6 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage: storage });
 
-router.post("/predict-image", upload.single("image"), predictImage);
+router.post("/predict-image",authorize, upload.single("image"), predictImage);
 
 module.exports = router;

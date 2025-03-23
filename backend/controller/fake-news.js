@@ -3,7 +3,7 @@ const path = require('path');
 
 const predictNews = (req, res) => {
     const { newsText } = req.body;
-
+    const {userId} = req.user;
     if (!newsText) {
         return res.status(400).json({ error: "News text is required" });
     }
