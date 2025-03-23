@@ -9,7 +9,7 @@ const SharedLayout = ({user})=>{
     }
     return (
         <>
-        <Navbar/>
+        <Navbar user={user}/>
         <Outlet context={{user}}/>
         <Footer/>
         </>

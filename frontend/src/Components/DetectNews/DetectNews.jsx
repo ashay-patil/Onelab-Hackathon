@@ -5,7 +5,6 @@ const DetectNews = ()=>{
     return (
         <div>
             <div>Detect News</div>
-            <p>Hello {user.name}</p>
         </div>
     )
 }

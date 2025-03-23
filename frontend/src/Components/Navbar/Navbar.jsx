@@ -1,11 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Navbar = ()=>{
+const Navbar = ({user})=>{
     return (
         <div className="navbar">
             <Link to="/dashboard">Home</Link>
             <Link to="/dashboard/detect-image">Detect Image</Link>
             <Link to="/dashboard/detect-news">Detect News</Link>
+            <p>Hello {user.name}</p>
         </div>
     )
 }

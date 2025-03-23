@@ -5,7 +5,6 @@ const DetectImage = ()=>{
     return (
         <div>
             <div>Detect Image</div>
-            <p>Hello {user.name}</p>
         </div>
     )
 }

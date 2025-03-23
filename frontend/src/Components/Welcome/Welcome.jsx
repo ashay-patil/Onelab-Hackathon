@@ -12,12 +12,37 @@ const Welcome = ({setUser}) => {
             [e.target.name]: e.target.value
         })
     }
-    const handleSubmit = (e) => {
+    const handleSubmit = async (e) => {
         e.preventDefault();
-        setUser(user);
-        console.log(user);
-        navigate('/dashboard');
-    }
+
+        try {
+            const response = await fetch("http://localhost:5000/user/login-user", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(user)
+            });
+
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.message || "Login failed");
+            }
+
+            // Save token to localStorage
+            localStorage.setItem("token", data.token);
+            alert("Login Successful");
+
+            // Set user and navigate to dashboard
+            setUser(user);
+            navigate("/dashboard");
+
+        } catch (error) {
+            alert(error.message);
+            console.error("Error during login:", error);
+        }
+    };
     return (
         <div className="welcomePage">
             <div className="registerDiv">
