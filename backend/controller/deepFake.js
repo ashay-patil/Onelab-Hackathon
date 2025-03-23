@@ -19,7 +19,7 @@ const predictImage = (req, res) => {
 
     pythonProcess.stdout.on("data", (data) => {
         prediction += data.toString().trim();
-        console.log("Raw Python Output:", prediction);  // Debugging Output
+        console.log("Raw Python Output:", prediction);
     });
 
     pythonProcess.stderr.on("data", (data) => {
@@ -31,8 +31,8 @@ const predictImage = (req, res) => {
         console.log(`Python process exited with code ${code}`);
 
         if (prediction) {
-            prediction = prediction.replace(/\s+/g, ""); // Remove extra spaces/newlines
-            console.log("Final Prediction:", prediction); // Debugging Output
+            prediction = prediction.replace(/\s+/g, "");
+            console.log("Final Prediction:", prediction);
 
             if (prediction === "Real" || prediction === "Fake") {
                 res.status(200).json({ prediction });

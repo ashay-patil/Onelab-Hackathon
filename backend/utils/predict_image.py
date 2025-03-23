@@ -16,10 +16,8 @@ sys.stdout.reconfigure(encoding='utf-8')
 import logging
 tf.get_logger().setLevel(logging.ERROR)
 
-# Define paths
 model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../model/deepfake_detector.h5"))
 
-# Ensure model file exists
 if not os.path.exists(model_path):
     print("Error: Model file not found", flush=True)
     sys.exit(1)
@@ -41,8 +39,7 @@ def predict_image(img_path):
         img_array = np.expand_dims(img_array, axis=0)
         img_array /= 255.0
 
-        # Prediction
-        prediction = model.predict(img_array, verbose=0)  # Suppress progress bar
+        prediction = model.predict(img_array, verbose=0) 
         return "Real" if prediction[0][0] < 0.5 else "Fake"
     except Exception as e:
         return f"Error: {e}"
@@ -55,6 +52,5 @@ if __name__ == "__main__":
     image_path = sys.argv[1]
     result = predict_image(image_path)
 
-    # Output only the prediction result
     sys.stdout.write(result + "\n")
     sys.stdout.flush()

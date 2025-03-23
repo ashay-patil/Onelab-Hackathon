@@ -1,6 +1,4 @@
-/* DetectNews Component Styling */
 
-/* Container styling */
 .detect-news-container {
     max-width: 800px;
     margin: 2rem auto;
@@ -11,14 +9,12 @@
     font-family: Arial, sans-serif;
 }
 
-/* Title styling */
 .detect-news-container h2 {
     text-align: center;
     color: #333;
     margin-bottom: 1.5rem;
 }
 
-/* Label styling */
 .detect-news-container label {
     display: block;
     font-weight: bold;
@@ -26,7 +22,6 @@
     color: #555;
 }
 
-/* Textarea styling */
 .detect-news-container textarea {
     width: 100%;
     padding: 1rem;
@@ -38,7 +33,6 @@
     box-sizing: border-box;
 }
 
-/* Button styling */
 .detect-news-container button {
     display: block;
     width: 100%;
@@ -61,14 +55,12 @@
     background: #45a049;
 }
 
-/* Error message styling */
 .error-message {
     color: red;
     margin-top: 1rem;
     text-align: center;
 }
 
-/* Prediction result styling */
 .prediction-result {
     margin-top: 2rem;
     text-align: center;
@@ -76,17 +68,14 @@
     font-weight: bold;
 }
 
-/* Real news styling */
 .prediction-real {
     color: #4CAF50;
 }
 
-/* Fake news styling */
 .prediction-fake {
     color: #E53935;
 }
 
-/* Responsive design */
 @media (max-width: 600px) {
     .detect-news-container {
         padding: 1rem;

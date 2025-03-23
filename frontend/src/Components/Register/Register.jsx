@@ -9,17 +9,14 @@ const Register = () => {
     lastName: "",
   });
   const navigate = useNavigate();
-
   const handleChange = (e) => {
     setUser({
       ...user,
       [e.target.name]: e.target.value,
     });
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     try {
       const response = await fetch("http://localhost:5000/user/register-user", {
         method: "POST",
@@ -28,13 +25,11 @@ const Register = () => {
         },
         body: JSON.stringify(user),
       });
-
       if (!response.ok) {
         const errorData = await response.json();
         alert(`Error: ${errorData.message || "Registration failed"}`);
         return;
       }
-
       const data = await response.json();
       alert("User Registered Successfully");
       console.log("Registration Response:", data);
@@ -60,7 +55,6 @@ const Register = () => {
             required
           />
         </div>
-
         <div className="form-row">
           <label htmlFor="lastName">Last Name:</label>
           <input

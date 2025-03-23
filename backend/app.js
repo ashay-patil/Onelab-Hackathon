@@ -18,8 +18,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 
-app.use(express.static('./public'));
-
 app.use('/user/',authenticateRoutes);
 app.use('/newsAPI/v1/',newsRoute);
 app.use('/imageAPI/v1/',deepFakeImageRoute);

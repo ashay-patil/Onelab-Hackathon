@@ -1,4 +1,4 @@
-/* Container styling */
+
 .detect-image-container {
     max-width: 600px;
     margin: 40px auto;
@@ -9,14 +9,13 @@
     text-align: center;
 }
 
-/* Heading */
+
 .detect-image-container h2 {
     color: #2c3e50;
     font-size: 2rem;
     margin-bottom: 20px;
 }
 
-/* Upload Section */
 .upload-section {
     display: flex;
     flex-direction: column;
@@ -38,7 +37,6 @@
     cursor: pointer;
 }
 
-/* Predict Button */
 .predict-btn {
     padding: 12px 24px;
     font-size: 1rem;
@@ -59,14 +57,12 @@
     cursor: not-allowed;
 }
 
-/* Error Message */
 .error-message {
     color: red;
     font-weight: bold;
     margin-top: 10px;
 }
 
-/* Prediction Result */
 .prediction-result {
     margin-top: 20px;
     padding: 12px;
