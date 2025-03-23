@@ -17,7 +17,7 @@ import logging
 tf.get_logger().setLevel(logging.ERROR)
 
 # Define paths
-model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../model/DeepFakeDetector.h5"))
+model_path = os.path.abspath(os.path.join(os.path.dirname(__file__), "../model/deepfake_detector.h5"))
 
 # Ensure model file exists
 if not os.path.exists(model_path):
